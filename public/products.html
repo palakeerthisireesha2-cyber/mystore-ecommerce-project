@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Mobile Products</title>
+
+<style>
+
+body{
+font-family:Arial;
+margin:0;
+background:#f2f2f2;
+}
+
+.navbar{
+background:#232f3e;
+color:white;
+padding:15px;
+font-size:20px;
+}
+
+.products{
+padding:30px;
+text-align:center;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+}
+
+.card{
+background:white;
+padding:15px;
+border-radius:8px;
+box-shadow:0 0 10px rgba(0,0,0,0.2);
+}
+
+.card img{
+width:100%;
+height:200px;
+object-fit:cover;
+}
+
+.price{
+color:green;
+font-weight:bold;
+}
+
+button{
+background:orange;
+border:none;
+padding:10px;
+width:100%;
+cursor:pointer;
+}
+
+button:hover{
+background:#ff8800;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="navbar">
+🛒 MyStore | Cart (<span id="cart-count">0</span>)
+</div>
+
+<div class="products">
+
+<div class="grid">
+
+<!-- iPhone 15 -->
+<div class="card">
+<img src="https://m.media-amazon.com/images/I/71d7rfSl0wL._SX679_.jpg">
+<h3>iPhone 15</h3>
+<p class="price">$999</p>
+<p>⭐⭐⭐⭐⭐</p>
+<button onclick="addToCart()">Add to Cart</button>
+</div>
+
+<!-- Samsung S23 -->
+<div class="card">
+<img src="https://m.media-amazon.com/images/I/61RZDb2mQxL._SX679_.jpg">
+<h3>Samsung Galaxy S23</h3>
+<p class="price">$799</p>
+<p>⭐⭐⭐⭐⭐</p>
+<button onclick="addToCart()">Add to Cart</button>
+</div>
+
+<!-- OnePlus 11 -->
+<div class="card">
+<img src="https://m.media-amazon.com/images/I/61amb0CfMGL._SX679_.jpg">
+<h3>OnePlus 11</h3>
+<p class="price">$699</p>
+<p>⭐⭐⭐⭐⭐</p>
+<button onclick="addToCart()">Add to Cart</button>
+</div>
+
+<!-- Realme GT -->
+<div class="card">
+<img src="https://fdn2.gsmarena.com/vv/pics/realme/realme-gt-neo2-1.jpg">
+<h3>Realme GT</h3>
+<p class="price">$499</p>
+<p>⭐⭐⭐⭐</p>
+<button onclick="addToCart()">Add to Cart</button>
+</div>
+
+<!-- Oppo Reno -->
+<div class="card">
+<img src="https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=400&q=80">
+<h3>Oppo Reno 10</h3>
+<p class="price">$550</p>
+<p>⭐⭐⭐⭐</p>
+<button onclick="addToCart()">Add to Cart</button>
+</div>
+
+<!-- Vivo V29 -->
+<div class="card">
+<img src="https://m.media-amazon.com/images/I/61l9ppRIiqL._SX679_.jpg">
+<h3>Vivo V29</h3>
+<p class="price">$520</p>
+<p>⭐⭐⭐⭐</p>
+<button onclick="addToCart()">Add to Cart</button>
+</div>
+
+<!-- Google Pixel -->
+<div class="card">
+<img src="https://m.media-amazon.com/images/I/71o8Q5XJS5L._SX679_.jpg">
+<h3>Google Pixel 8</h3>
+<p class="price">$899</p>
+<p>⭐⭐⭐⭐⭐</p>
+<button onclick="addToCart()">Add to Cart</button>
+</div>
+
+<!-- Redmi Note -->
+<div class="card">
+<img src="https://m.media-amazon.com/images/I/71tCOhEigtL._SX679_.jpg">
+<h3>Redmi Note 12</h3>
+<p class="price">$299</p>
+<p>⭐⭐⭐⭐</p>
+<button onclick="addToCart()">Add to Cart</button>
+</div>
+
+<!-- Poco -->
+<div class="card">
+<img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=400&q=80">
+<h3>Poco F5</h3>
+<p class="price">$399</p>
+<p>⭐⭐⭐⭐</p>
+<button onclick="addToCart()">Add to Cart</button>
+</div>
+
+<!-- Motorola -->
+<div class="card">
+<img src="https://fdn2.gsmarena.com/vv/pics/motorola/motorola-edge40-1.jpg">
+<h3>Motorola Edge</h3>
+<p class="price">$499</p>
+<p>⭐⭐⭐⭐</p>
+<button onclick="addToCart()">Add to Cart</button>
+</div>
+
+<!-- Nokia -->
+<div class="card">
+<img src="https://m.media-amazon.com/images/I/71Swqqe7XAL._SX679_.jpg">
+<h3>Nokia X30</h3>
+<p class="price">$450</p>
+<p>⭐⭐⭐⭐</p>
+<button onclick="addToCart()">Add to Cart</button>
+</div>
+
+<!-- Xiaomi -->
+<div class="card">
+<img src="https://m.media-amazon.com/images/I/71yzJoE7WlL._SX679_.jpg">
+<h3>Xiaomi 13</h3>
+<p class="price">$650</p>
+<p>⭐⭐⭐⭐⭐</p>
+<button onclick="addToCart()">Add to Cart</button>
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>

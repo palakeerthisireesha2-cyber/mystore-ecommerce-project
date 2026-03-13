@@ -1,0 +1,64 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Subscribers List</title>
+
+<style>
+
+table{
+width:50%;
+margin:auto;
+margin-top:40px;
+border-collapse:collapse;
+}
+
+th,td{
+border:1px solid black;
+padding:10px;
+text-align:center;
+}
+
+th{
+background:black;
+color:white;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h2 style="text-align:center;">📊 Subscribers List</h2>
+
+<table>
+
+<tr>
+<th>No</th>
+<th>Email</th>
+</tr>
+
+<tbody id="tableData"></tbody>
+
+</table>
+
+<script>
+
+let email = localStorage.getItem("testemail");
+
+let table = document.getElementById("tableData");
+
+if(email){
+
+table.innerHTML = "<tr><td>1</td><td>"+email+"</td></tr>";
+
+}
+
+</script>
+
+</body>
+
+</html>

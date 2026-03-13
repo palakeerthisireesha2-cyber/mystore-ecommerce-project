@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>My Ecommerce Store</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+    <script>
+
+let cartCount = 0;
+
+function addToCart(){
+cartCount++;
+document.getElementById("cart-count").innerText = cartCount;
+alert("Product added to cart");
+}
+
+</script>
+
+/* GENERAL */
+
+body{
+font-family: Arial;
+margin:0;
+background:darkmagenta;
+}
+
+/* TOP BAR */
+
+.topbar{
+background:black;
+color:white;
+text-align:center;
+padding:8px;
+font-size:14px;
+}
+
+/* NAVBAR */
+
+.navbar{
+display:flex;
+align-items:center;
+justify-content:space-between;
+background:#232f3e;
+padding:15px;
+color:white;
+}
+
+.logo{
+font-size:22px;
+font-weight:bold;
+}
+
+.search{
+width:40%;
+padding:8px;
+}
+
+.navbar a{
+color:white;
+text-decoration:none;
+margin:10px;
+}
+
+#cart-count{
+background:red;
+padding:2px 6px;
+border-radius:50%;
+}
+
+/* HERO */
+
+.hero{
+text-align:center;
+background:white;
+padding:60px;
+}
+
+.hero button{
+padding:10px 20px;
+font-size:16px;
+cursor:pointer;
+}
+
+/* CATEGORIES */
+
+.categories{
+padding:30px;
+text-align:center;
+}
+
+.category-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+margin-top:20px;
+}
+
+.category-card{
+background:skyblue;
+padding:20px;
+border-radius:5px;
+box-shadow:0 0 5px skyblue;
+}
+
+/* PRODUCTS */
+
+.products{
+padding:30px;
+text-align:center;
+}
+
+.product-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+margin-top:20px;
+}
+
+.product-card{
+background:skyblue;
+padding:15px;
+border-radius:5px;
+box-shadow:0 0 5px skyblue;
+}
+
+.product-card img{
+width:100%;
+}
+
+.product-card button{
+background:orange;
+border:none;
+padding:8px;
+cursor:pointer;
+}
+
+/* DEAL */
+
+.deal{
+background:white;
+padding:30px;
+text-align:center;
+}
+
+/* REVIEWS */
+
+.reviews{
+padding:30px;
+text-align:center;
+}
+
+.review-grid{
+display:flex;
+justify-content:center;
+gap:20px;
+}
+
+.review{
+background:green;
+padding:20px;
+width:200px;
+box-shadow:0 0 5px gray;
+}
+
+/* NEWSLETTER */
+
+.newsletter{
+background:#232f3e;
+color:green;
+text-align:center;
+padding:30px;
+}
+
+.newsletter input{
+padding:8px;
+width:200px;
+}
+
+/* FOOTER */
+
+footer{
+background:rgb(0, 0, 0);
+color:green;
+text-align:center;
+padding:20px;
+margin-top:30px;
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+<!-- TOP BAR -->
+
+<div class="topbar">
+🔥 Big Sale Today - 50% OFF
+</div>
+
+
+<!-- NAVBAR -->
+<header class="navbar">
+
+<div class="logo">🛒 MyStore</div>
+
+<input type="text" id="searchInput" placeholder="Search products..." class="search" onkeyup="searchProduct()">
+
+<nav>
+<a href="products.html">Products</a>
+<a href="cart.html">Cart (<span id="cart-count">0</span>)</a>
+<a href="login.html">Login</a>
+<a href="register.html">Register</a>
+<a href="admin.html">Admin</a>
+</nav>
+
+</header>
+
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+<h1>Welcome to My Ecommerce Store</h1>
+
+<p>Best Deals On Electronics</p>
+
+<button onclick="window.location.href='products.html'">Shop Now</button>
+
+</section>
+
+
+<!-- CATEGORIES -->
+
+<section class="categories">
+
+<h2>Shop By Category</h2>
+
+<div class="category-grid">
+
+<a href="products.html?category=mobiles">
+<div class="category-card">📱 Mobiles</div>
+</a>
+
+<a href="laptops.html">
+<div class="category-card">💻 Laptops</div>
+</a>
+
+<a href="headphones.html">
+<div class="category-card">🎧 Headphones</div>
+</a>
+
+<a href="smartwatch.html">
+<div class="category-card">⌚ Smart Watches</div>
+</a>
+
+</div>
+
+</section>
+
+
+<!-- PRODUCTS -->
+<section class="featured">
+<h2>Featured Products</h2>
+
+<div class="product-grid">
+
+<div class="product-card">
+<img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9">
+<h3>Smart Mobile</h3>
+<p class="price">$500</p>
+<p class="rating">⭐⭐⭐⭐☆</p>
+<button onclick="addToCart('Smart Mobile', 500)">Add to Cart</button>
+</div>
+
+<div class="product-card">
+<img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8">
+<h3>Laptop</h3>
+<p class="price">$800</p>
+<p class="rating">⭐⭐⭐⭐⭐</p>
+<button onclick="addToCart('Laptop', 800)">Add to Cart</button>
+</div>
+
+<div class="product-card">
+<img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e">
+<h3>Headphones</h3>
+<p class="price">$100</p>
+<p class="rating">⭐⭐⭐⭐☆</p>
+<button onclick="addToCart('Headphones', 100)">Add to Cart</button>
+</div>
+
+<div class="product-card">
+<img src="https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b">
+<h3>Smart Watch</h3>
+<p class="price">$150</p>
+<p class="rating">⭐⭐⭐⭐☆</p>
+<button onclick="addToCart('Smart Watch', 150)">Add to Cart</button>
+</div>
+
+</div>
+</section>
+<!-- REVIEWS -->
+
+<section class="reviews">
+
+<h2>Customer Reviews</h2>
+
+<input type="text" id="reviewText" placeholder="Write your review">
+<button onclick="addReview()">Add Review</button>
+
+<div class="review-grid" id="reviewGrid">
+
+<div class="review">
+⭐ ⭐ ⭐ ⭐ ⭐
+<p>Best store ever!</p>
+</div>
+
+<div class="review">
+⭐ ⭐ ⭐ ⭐
+<p>Fast delivery</p>
+</div>
+
+<div class="review">
+⭐ ⭐ ⭐ ⭐ ⭐
+<p>Good products</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- NEWSLETTER -->
+
+<section class="newsletter">
+
+<h2>Subscribe For Offers</h2>
+
+<input type="email" id="email" placeholder="Enter email">
+
+<button onclick="subscribe()">Subscribe</button>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>© 2026 MyStore | All Rights Reserved</p>
+
+</footer>
+<script>
+
+function subscribe(){
+
+let email = document.getElementById("email").value;
+
+if(email==""){
+alert("Enter email");
+return;
+}
+
+localStorage.setItem("testemail",email);
+
+alert("Saved Successfully");
+
+}
+
+</script>
+<script>
+
+function addReview(){
+
+let text = document.getElementById("reviewText").value;
+
+if(text==""){
+alert("Please enter review");
+return;
+}
+
+let reviewBox = `
+<div class="review">
+⭐ ⭐ ⭐ ⭐ ⭐
+<p>${text}</p>
+</div>
+`;
+
+document.getElementById("reviewGrid").innerHTML += reviewBox;
+
+document.getElementById("reviewText").value="";
+
+}
+
+</script>
+<script>
+
+function searchProduct(){
+
+let input = document.getElementById("searchInput").value.toLowerCase();
+
+let products = document.getElementsByClassName("product-card");
+
+for(let i=0;i<products.length;i++){
+
+let text = products[i].innerText.toLowerCase();
+
+if(text.indexOf(input) > -1){
+products[i].style.display="block";
+}
+else{
+products[i].style.display="none";
+}
+
+}
+
+}
+
+</script>
+</body>
+</html>
